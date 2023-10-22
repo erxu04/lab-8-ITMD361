@@ -1,12 +1,25 @@
 function init(){
-  //add your javascrip between these two lines of code
-   
+	var button = document.getElementById("entrybutton");
+  var result = document.getElementById("textoutput").innerHTML; //stores copy of html element's content into variable result
+  
+  function myEventText(){
+		var textInput = document.getElementById("entryinput").value;
+  	alert("Emily Xu: " + textInput);
+    console.log("wejfewfoe");
+    console.log("result: " + result);
+    console.log("textInput: " + textInput);
+    /* result = textInput; */	//this doesn't change the actual html content, just the value stored in result variable which is not tied to HTML
+    document.getElementById("textoutput").innerHTML = textInput; //directly affects HTML element
+    
+    console.log("New result: " + result);
+  }
   
   
   
+  button.addEventListener("click", myEventText);
   
   
   
-  
-  window.addEventListener('load', init);
 }
+
+window.addEventListener('load', init)
